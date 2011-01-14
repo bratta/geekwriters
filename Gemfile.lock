@@ -5,6 +5,7 @@ GEM
       fast-stemmer (>= 1.0.0)
     directory_watcher (1.3.2)
     fast-stemmer (1.0.0)
+    highline (1.6.1)
     jekyll (0.10.0)
       classifier (>= 1.3.1)
       directory_watcher (>= 1.1.1)
@@ -25,6 +26,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  highline
   jekyll
   rack-jekyll
   shotgun

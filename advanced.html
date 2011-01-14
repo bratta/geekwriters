@@ -1,0 +1,63 @@
+---
+layout: page
+title: Submit a Blog Post
+---
+<h3>Advanced Post Submission</h3>
+
+<p>If you're a technical person and are not faint of heart, you can submit a blog post with the formatting and 
+  any assets you want. You'll need the following tools:</p>
+
+<ul>
+  <li><a href="http://git-scm.com/">git</a> - This site is stored and served out of a git repository</li>
+  <li>A <a href="http://github.com">Github</a> account</li>
+  <li><a href="http://www.ruby-lang.org/en/">Ruby</a> with the <a href="http://gembundler.com/">bundler</a> gem installed (optional)</li>
+  <li>Read up on <a href="https://github.com/mojombo/jekyll">jekyll</a> to become familiar with how this blog is setup.</li>
+</ul>
+
+<p>Once you are ready, do the following:</p>
+
+<ul>
+  <li><a href="http://help.github.com/forking/">Fork</a> this repository: <a href="https://github.com/bratta/geekwriters">https://github.com/bratta/geekwriters</a>. This contains all the pages for the blog.</li>
+  <li>Clone your new fork of the geekwriters repository:<br />
+      {% highlight bash %}
+      $ git clone git@github.com:yourgithubaccount/geekwriters.git
+      $ cd geekwriters
+      {% endhighlight %}
+  </li>
+  <li>If you have ruby installed, you can get the requirements for jekyll by doing the following:<br />
+      {% highlight bash %}
+      $ bundle install
+      {% endhighlight %}
+  </li>
+  <li>You can create pages in the <strong>_posts</strong> directory using either <a href="http://daringfireball.net/projects/markdown/">Markdown</a> syntax, <a href="http://en.wikipedia.org/wiki/Textile_(markup_language)">Textile</a>, or HTML.
+    The name of your file should look something like this: YYYY-MM-DD-title.MARKUP, where the first part is the date for your post, the title is the title of your post, and MARKUP is the markup language of your choice 
+    (either markdown, textile, or html).</li>
+  <li>You will need to put some metadata at the front of your post. It looks like this:
+    {% highlight yaml %}
+---
+layout: post
+title: This is a test!
+author: tim
+comments: true
+---
+    {% endhighlight %}
+    Don't change "layout", but do change the title, the author, and remove the comments line if you do not want to enable commenting on your post.
+    After the final dashed line, you can put the text of your post using the markup language of your choice. See the existing documents in the
+    _posts directory for more detail.</li>
+  <li>If you have ruby installed and ran the bundler step above, instead of creating the file yourself, you can do this:<br />
+    {% highlight bash %}
+    $ rake newpost
+    {% endhighlight %}
+    This will ask you for some basic information and create the file for you (assuming Markdown syntax) and open up the new file in your editor.
+    Then all you have to do is write your content, and save the file!</li>
+  <li>When you are done editing, you will need to commit your changes to git and push them up to Github:<br />
+    {% highlight bash %}
+    $ git add .
+    $ git commit -m "Adding my new post"
+    $ git push origin master
+    {% endhighlight %}</li>
+  <li>As soon as your changes are pushed up to Github, then follow the <a href="http://help.github.com/pull-requests/">Github guide to submitting a pull request</a>.
+    This will notify me of your change and I will add your post to the site by merging in the changes.</li>
+</ul>
+
+<p>Yes, this seems like a lot of work to submit a blog post. But once you get going it is really not bad at all.</p>

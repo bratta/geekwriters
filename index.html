@@ -1,9 +1,10 @@
 ---
 layout: default
-title: Geek Writers
+title: Home
 ---
-<ul class="recent">
-{% for post in site.posts limit: 5 %}
-  <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+{% for post in paginator.posts %}
+  {% include excerpt.html %}
 {% endfor %}
-</ul>
+
+{% include page_navigation.html %}
+{% include disqus_comment_counts.html %}

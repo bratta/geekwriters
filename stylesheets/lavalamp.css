@@ -1,0 +1,47 @@
+#navigation {
+	float: right;
+	top: -125px;
+}
+/* Styles for the entire LavaLamp menu */
+.lavaLamp {
+    position: relative;
+    height: 29px; width: 421px;
+    padding: 15px; margin: 10px 0;
+    overflow: hidden;
+}
+/* Force the list to flow horizontally */
+.lavaLamp li {
+    float: left;
+    list-style: none;
+}
+/* Represents the background of the highlighted menu-item. */
+.lavaLamp li.back {
+    -moz-border-radius: 5px;
+    border-radius: 5px;	
+    background-color: #edb295;
+    width: 9px; height: 30px;
+    z-index: 8;
+    position: absolute;
+}
+.lavaLamp li.back .left {
+	  -moz-border-radius: 5px;
+	  border-radius: 5px;	
+    background-color: #edb295;
+    height: 30px;
+    margin-right: 9px;
+}
+/* Styles for each menu-item. */
+.lavaLamp li a {
+		position: relative; overflow: hidden;
+		font-weight: bold;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size: 14px;	
+		font-family: Arial, "MS Trebuchet", sans-serif;
+		color: #535353; outline: none;
+		text-align: center;
+		height: 30px; top: 7px;
+		z-index: 10; letter-spacing: 0;
+		float: left; display: block;
+		margin: auto 10px;
+}

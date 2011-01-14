@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<article>
+  <header>
+    <h1><a href="{{ page.url }}">{{ page.title }}</a></h1>
+    <p class="byline">Posted by <strong>{{ page.author }}</strong> on <strong>{{ page.date | date_to_string }}</strong></p>
+  </header>
+  {{ content }}
+</article>
+
+{% include post_navigation.html %}
+
+{% include disqus.html %}
