@@ -1,5 +1,5 @@
 desc "Create a new post"
-task :newpost do
+task :post do
   require 'rubygems'
   require 'highline/import'
 
@@ -14,4 +14,14 @@ task :newpost do
     end
   end
   `$EDITOR #{filename}`
+end
+
+desc "Start jekyll"
+task :server do
+  `bundle exec jekyll --auto --server`
+end
+
+desc "Regenerate static site"
+task :build do
+  `rm -rf _site && bundle exec jekyll`
 end

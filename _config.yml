@@ -1,3 +1,3 @@
 pygments: true
-exclude: config.ru, Gemfile, Gemfile.lock, Rakefile
+exclude: Gemfile, Gemfile.lock, Rakefile
 paginate: 5
